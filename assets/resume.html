@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Charlie Daly</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link href='http://fonts.googleapis.com/css?family=Lato:400,500,600,700|Open+Sans:400,500,600,700' rel='stylesheet' type='text/css'>
+    <style>
+      .clear-margin {
+  margin: 0;
+}
+.space-top {
+  margin-top: 10px;
+}
+.space-right {
+  margin-right: 10px;
+}
+.icon-left {
+  margin-right: 5px;
+}
+.icon-right {
+  margin-left: 5px;
+}
+.labels {
+  word-spacing: 5px;
+  line-height: 2;
+}
+.label-keyword {
+  display: inline-block;
+  background: #7eb0db;
+  color: white;
+  font-size: 0.9em;
+  padding: 5px;
+  border: 1px solid #357ebd;
+}
+.link-disguise {
+  color: inherit;
+}
+.link-disguise:hover {
+  color: inherit;
+}
+@media (max-width: 992px) {
+  .clear-margin-sm {
+    margin-bottom: 0;
+  }
+}
+body {
+  font-family: 'Lato', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background: #f0f0f0;
+  color: #333333;
+  font-size: 16px;
+}
+.text-bolder {
+  font-weight: bold;
+}
+@media only screen {
+  .container {
+    max-width: 50em;
+  }
+}
+@media (max-width: 480px) {
+  ul {
+    padding-left: 25px;
+  }
+  /*
+        .mobile-title {
+            display: inline-block;
+            margin-left: 5px;
+            font-weight: bold;
+            text-transform: uppercase;
+            vertical-align: middle;
+        }
+*/
+  .background-details {
+    display: block;
+  }
+  .background-details .icon {
+    max-width: inherit;
+    min-width: inherit;
+    text-align: left;
+  }
+  .background-details .icon,
+  .background-details .info {
+    display: block;
+    padding: 10px 0;
+  }
+  .background-details .title {
+    display: none;
+  }
+  .card-nested {
+    padding: 5px 0;
+  }
+}
+.profile-card {
+  display: table;
+  width: 100%;
+}
+.profile-pic {
+  display: table-cell;
+  vertical-align: top;
+  padding: 1rem 4rem 0 0 ;
+}
+.profile-pic img {
+  width: 100px;
+  height: 100px;
+}
+.contact-details {
+  display: table-cell;
+}
+.contact-details .detail {
+  display: inline-block;
+  line-height: 2;
+  margin-right: 2rem;
+}
+.contact-details .detail .icon {
+  padding-right: 7px;
+  color: #888;
+}
+.contact-details .detail .info {
+  font-size: 0.8em;
+}
+.social-links {
+  line-height: 2.5;
+}
+.social-link {
+  display: block;
+}
+.social-link span {
+  display: inline-block;
+  vertical-align: middle;
+}
+.social-link:hover,
+.social-link:focus {
+  text-decoration: none;
+}
+.social-link .fa {
+  text-align: center;
+  width: 2em;
+}
+.fa-github {
+  color: #454545;
+}
+.fa-github:hover,
+.fa-github:focus {
+  text-decoration: none;
+  color: #2b2b2b;
+}
+.fa-twitter {
+  color: #33ccff;
+}
+.fa-twitter:hover,
+.fa-twitter:focus {
+  text-decoration: none;
+  color: #00bfff;
+}
+.fa-rss {
+  color: #f36f24;
+}
+.fa-rss:hover,
+.fa-rss:focus {
+  text-decoration: none;
+  color: #d8560c;
+}
+.fa-linkedin {
+  color: #007bb6;
+}
+.fa-linkedin:hover,
+.fa-linkedin:focus {
+  text-decoration: none;
+  color: #005983;
+}
+.fa-skype {
+  color: #12a5f4;
+}
+.fa-skype:hover,
+.fa-skype:focus {
+  text-decoration: none;
+  color: #0986ca;
+}
+.fa-stack-overflow {
+  color: #8e8e92;
+}
+.fa-stack-overflow:hover,
+.fa-stack-overflow:focus {
+  text-decoration: none;
+  color: #747479;
+}
+.fa-soundcloud {
+  color: #e8822d;
+}
+.fa-soundcloud:hover,
+.fa-soundcloud:focus {
+  text-decoration: none;
+  color: #cc6916;
+}
+.fa-pinterest {
+  color: #bd091f;
+}
+.fa-pinterest:hover,
+.fa-pinterest:focus {
+  text-decoration: none;
+  color: #8c0717;
+}
+.fa-vimeo {
+  color: #17b3e8;
+}
+.fa-vimeo:hover,
+.fa-vimeo:focus {
+  text-decoration: none;
+  color: #128fba;
+}
+.fa-behance {
+  color: #2c98cf;
+}
+.fa-behance:hover,
+.fa-behance:focus {
+  text-decoration: none;
+  color: #2379a5;
+}
+.fa-codepen {
+  color: #1c1c1c;
+}
+.fa-codepen:hover,
+.fa-codepen:focus {
+  text-decoration: none;
+  color: #020202;
+}
+.fa-foursquare {
+  color: #fa4778;
+}
+.fa-foursquare:hover,
+.fa-foursquare:focus {
+  text-decoration: none;
+  color: #f91554;
+}
+.fa-reddit {
+  color: #545454;
+}
+.fa-reddit:hover,
+.fa-reddit:focus {
+  text-decoration: none;
+  color: #3b3b3b;
+}
+.fa-spotify {
+  color: #acd200;
+}
+.fa-spotify:hover,
+.fa-spotify:focus {
+  text-decoration: none;
+  color: #829f00;
+}
+.fa-dribbble {
+  color: #ce366f;
+}
+.fa-dribbble:hover,
+.fa-dribbble:focus {
+  text-decoration: none;
+  color: #a82959;
+}
+.fa-facebook {
+  color: #4b6daa;
+}
+.fa-facebook:hover,
+.fa-facebook:focus {
+  text-decoration: none;
+  color: #3b5687;
+}
+.fa-angellist {
+  color: #000000;
+}
+.fa-angellist:hover,
+.fa-angellist:focus {
+  text-decoration: none;
+  color: #000000;
+}
+.fa-bitbucket {
+  color: #205081;
+}
+.fa-bitbucket:hover,
+.fa-bitbucket:focus {
+  text-decoration: none;
+  color: #163758;
+}
+.fa-google-plus {
+  color: #bf2a1d;
+}
+.fa-google-plus:hover,
+.fa-google-plus:focus {
+  text-decoration: none;
+  color: #932016;
+}
+.background-card h4 {
+  font-variant: small-caps;
+  color: #777777;
+  border-bottom: 1px solid #eeeeee;
+  padding-bottom: 1em;
+  margin-bottom: 1em;
+  line-height: 1.2;
+}
+.background-card h4:not(:first-child) {
+  margin-top: 2em;
+}
+h4 > .fa,
+h4 > .title {
+  display: inline-block;
+  vertical-align: baseline;
+}
+h4 > .fa {
+  width: 4rem;
+}
+.content {
+  line-height: 1.5;
+}
+.card {
+  background: #ffffff;
+  border: 1px solid #e6e6e6;
+  border-radius: 3px;
+  padding: 2em 3.5em;
+}
+.card-nested {
+  padding: 1.5rem 0 1.5rem 4.2rem;
+}
+.card-wrapper {
+  padding: 5px;
+}
+.enumeration:not(:last-child):after {
+  content: ", ";
+}
+.enumeration:last-child:after {
+  content: ".";
+}
+@media only screen and (max-width: 768px) {
+  .profile-card {
+    display: block;
+  }
+  .contact-details,
+  .profile-pic {
+    display: block;
+    text-align: center;
+  }
+  .card-nested {
+    padding-left: 0;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .contact-details .detail {
+    display: block;
+  }
+}
+.card-skills {
+  position: relative;
+}
+.skill-info {
+  margin-left: 20px;
+}
+@media only screen and (min-width: 768px) {
+  .skill {
+    border-left: 9px solid #555555;
+  }
+  .skill.beginner {
+    height: 50%;
+    border-color: #e74c3c;
+  }
+  .skill.intermediate {
+    height: 70%;
+    border-color: #f1c40f;
+  }
+  .skill.advanced {
+    border-color: #5cb85c;
+  }
+  .skill.master {
+    border-color: black;
+  }
+}
+@media (max-width: 768px) {
+  .quote {
+    font-size: inherit;
+  }
+}
+@media print {
+  body {
+    font-size: 10pt;
+  }
+  a[href]:after {
+    content: none !important;
+  }
+  .pagebreak {
+    page-break-before: always;
+  }
+  .background-card h4:not(:first-child) {
+    margin-top: 0 !important;
+  }
+  .card {
+    border: 0;
+    padding: 0;
+  }
+  .container {
+    max-width: 100%;
+    width: 100%;
+  }
+  .contact-details .detail .icon {
+    color: #888 !important;
+  }
+  .background-card h4 {
+    padding-bottom: 0.5em;
+    margin-bottom: 0.5em;
+    margin-top: 1em !important;
+  }
+  h4 > .fa {
+    display: none !important;
+  }
+  .card-nested {
+    padding: .5rem 0 .5rem 0;
+  }
+  .labels {
+    display: inline;
+  }
+  .skill-info {
+    margin-left: 0;
+  }
+  blockquote {
+    font-size: 100%;
+  }
+}
+
+    </style>
+  </head>
+
+  <body itemscope itemtype="http://schema.org/Person">
+    
+    <div class="container">
+      <section class="row">
+        <div class="card-wrapper">
+          <div class="card">
+            <div class="profile-card">
+                <div class="profile-pic">
+                  <img class="media-object img-circle center-block"  data-src="holder.js/100x100"
+                    alt="Charlie Daly" src="https://charliedaly.co.uk/assets/cd0007-square.jpg" itemprop="image">
+                </div>
+                <div class="contact-details">
+                  <div class="name-and-profession">
+                    <h3 class="text-bolder name" itemprop="name"> Charlie Daly</h3>
+                    <h5 class="text-muted" itemprop="jobTitle">Cloud technolgist, startup founder and community builder.</h5>
+                  </div>
+
+                    <div class="detail">
+                      <span class="icon">
+                        <i class="fa fa-lg fa-envelope"></i>
+                      </span>
+
+                      <span class="info">
+                        <a href="mailto:charlie@datadyne.io" class="link-disguise" itemprop="email">charlie@datadyne.io</a>
+                      </span>
+                    </div>
+
+
+                    <div class="detail">
+                      <span class="icon">
+                        <i class="fa fa-lg fa-map-marker"></i>
+                      </span>
+
+                        <span class="info">
+                          London, UK,
+                          Remote OK
+                        </span>
+                    </div>
+
+                </div>
+                
+            </div>
+            <hr>
+
+            <div class="social-links">
+                <a class="social-link" href="https://www.linkedin.com/in/charlie-daly/" target="_blank">
+                  <span class="fa fa-linkedin fa-2x"></span> 
+                  <span class="social-link-text">https://www.linkedin.com/in/charlie-daly/</span>
+                </a>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <section class="row">
+        <div class="card-wrapper">
+          <div class="card background-card">
+
+            <h4 id="about"> <span class="fa fa-lg fa-user"></span> <span class="title">About</span> </h4>
+            <div class="card-nested" itemprop="description">
+              <p> I&#x27;ve helped one of the original big-data pioneers move to the Cloud, used automation to make development teams happier, brought a University research project closer to commercialisation and helped dozens of people start companies of their own.
+
+Currently I am focussed on helping teams get more out of the Cloud and making it easier for startups to get funded. </p>
+            </div>
+
+            <h4 id="work-experience"> <span class="fa fa-lg fa-pencil-square-o"></span> <span class="title">Work Experience</span> </h4>
+            <ul class="list-unstyled">
+                <li class="card-nested">
+                  <div class="content has-sidebar">
+                    <p class="clear-margin-sm">
+                      <strong>Freelancer</strong>,
+                      <a href="https://www.toptal.com" target="_blank">Toptal.com</a>
+                    </p>
+                    <p class="text-muted">
+                      <small>
+                        <span class="space-right"> Feb 2020 -  Present  </span>
+                         <span> <i class="fa fa-clock-o icon-left"></i> 1 month </span> 
+                      </small>
+                    </p>
+                    <p>Freelancing network for the top 3% of global talent.</p>
+                  </div>
+
+                </li>
+                <li class="card-nested">
+                  <div class="content has-sidebar">
+                    <p class="clear-margin-sm">
+                      <strong>Consultant</strong>,
+                      <a href="https://www.salford.ac.uk/simt" target="_blank">University of Salford</a>
+                    </p>
+                    <p class="text-muted">
+                      <small>
+                        <span class="space-right"> Sep 2019 -  Mar 2020  </span>
+                         <span> <i class="fa fa-clock-o icon-left"></i> 5 months </span> 
+                      </small>
+                    </p>
+                    <p>Commercialising an innovative research project that enables real-time collaboration with user-generated media.</p>
+                      <ul>
+                          <li> Advised on modern deployment processes utilizing AWS, Docker, and BitBucket CI. </li>
+                          <li> Reduced costs and improved uptime by integrating with service providers such as MongoDB Atlas. </li>
+                          <li> Worked on a React and Node.js-based real-time micro-services based application. </li>
+                          <li> Implementing enterprise features such as SSO. </li>
+                      </ul>
+                  </div>
+
+                </li>
+                <li class="card-nested">
+                  <div class="content has-sidebar">
+                    <p class="clear-margin-sm">
+                      <strong>Founder</strong>,
+                      Funding Startup
+                    </p>
+                    <p class="text-muted">
+                      <small>
+                        <span class="space-right"> Apr 2019 -  Present  </span>
+                         <span> <i class="fa fa-clock-o icon-left"></i> 11 months </span> 
+                      </small>
+                    </p>
+                    <p>Helping early-stage founders find their perfect investor.</p>
+                      <ul>
+                          <li> Part of the team responsible for vision and strategy. </li>
+                          <li> Leading the technical implementation in a lean starup environment. </li>
+                      </ul>
+                  </div>
+
+                </li>
+                <li class="card-nested">
+                  <div class="content has-sidebar">
+                    <p class="clear-margin-sm">
+                      <strong>Senior cloud engineer</strong>,
+                      <a href="https://www.dunnhumby.com/solutions/price-and-promotions" target="_blank">Dunnhumby</a>
+                    </p>
+                    <p class="text-muted">
+                      <small>
+                        <span class="space-right"> Jun 2018 -  Jun 2019  </span>
+                         <span> <i class="fa fa-clock-o icon-left"></i> 11 months </span> 
+                      </small>
+                    </p>
+                    <p>Member of Core Technology team. 12 month contract.</p>
+                      <ul>
+                          <li> Worked on an advanced Platform-as-a-Service system for Data Analysts. Built using Go, GRPC and React on top of Kubernetes and GCP. </li>
+                          <li> Developed a set of tools for self-service provisioning of Hadoop/Spark clusters capable of auto-scaling and auto-decommissioning using Python.  </li>
+                          <li> Increased team velocity by creating a framework for automated testing of deployments using Selenium, Cucumber and Gitlab CI. </li>
+                          <li> Improved cost-visibility by integrating systems to monitor usage of cloud resources with Stackdriver and BigQuery. </li>
+                          <li> Deployment of a number of proprietary and OSS applications, such as Juptyer and Redash, onto the platform using Docker, Ansible and Bash. </li>
+                      </ul>
+                  </div>
+
+                </li>
+                <li class="card-nested">
+                  <div class="content has-sidebar">
+                    <p class="clear-margin-sm">
+                      <strong>Freelancer</strong>,
+                      <a href="https://www.amazerealise.com/" target="_blank">AmazeRealise</a>
+                    </p>
+                    <p class="text-muted">
+                      <small>
+                        <span class="space-right"> Apr 2018 -  May 2018  </span>
+                         <span> <i class="fa fa-clock-o icon-left"></i> 30 days </span> 
+                      </small>
+                    </p>
+                    <p>Developed a social training solution for an iconic retail brand with over 5,000 stores.</p>
+                      <ul>
+                          <li> Built a ASP.NET &amp; Azure powered training administration system. </li>
+                          <li> Created a library of reusable React components to designer specifications. </li>
+                      </ul>
+                  </div>
+
+                </li>
+                <li class="card-nested">
+                  <div class="content has-sidebar">
+                    <p class="clear-margin-sm">
+                      <strong>Software engineer</strong>,
+                      <a href="https://www.dunnhumby.com/solutions/price-and-promotions" target="_blank">Dunnhumby</a>
+                    </p>
+                    <p class="text-muted">
+                      <small>
+                        <span class="space-right"> Jul 2015 -  Aug 2017  </span>
+                         <span> <i class="fa fa-clock-o icon-left"></i> 2 years 1 month </span> 
+                      </small>
+                    </p>
+                    <p>Creating the foundational platform for the next-generation of revenue generating products.</p>
+                      <ul>
+                          <li> Helped create a distributed, realtime pricing platform utilising Microsoft Orleans, ASP.NET and SignalR. Responsible for API and Authentication layers. </li>
+                          <li> Delivered the UX and front end of an experimental system that provides alerts and insights to non-technical users utilising full-stack Scala and Akka. </li>
+                          <li> Created a centralized, custom authentication system using IdentityServer 4.0 and OAuth. </li>
+                          <li> Contributed to office culture by leading the first in a series of educational sessions. Presented a talk on the F# programming language. </li>
+                      </ul>
+                  </div>
+
+                </li>
+                <li class="card-nested">
+                  <div class="content has-sidebar">
+                    <p class="clear-margin-sm">
+                      <strong>Software engineer</strong>,
+                      <a href="https://www.storefeeder.com/" target="_blank">StoreFeeder</a>
+                    </p>
+                    <p class="text-muted">
+                      <small>
+                        <span class="space-right"> Jan 2013 -  Mar 2015  </span>
+                         <span> <i class="fa fa-clock-o icon-left"></i> 2 years 1 month </span> 
+                      </small>
+                    </p>
+                    <p>Hands-on role in a growing SaaS startup.</p>
+                      <ul>
+                          <li> Led an integration project with our FTSE100 partner company, Tesco. </li>
+                          <li> Reduced customer churn by building amicable relationships with clients in training, sales and support roles. </li>
+                          <li> Built numerous API integrations with partners like Amazon, E-Bay, Shopify, Magento, and BigCommerce. </li>
+                      </ul>
+                  </div>
+
+                </li>
+                <li class="card-nested">
+                  <div class="content has-sidebar">
+                    <p class="clear-margin-sm">
+                      <strong>Manufacturing systems intern</strong>,
+                      <a href="https://www.rolls-royce.com/" target="_blank">Rolls-Royce Plc.</a>
+                    </p>
+                    <p class="text-muted">
+                      <small>
+                        <span class="space-right"> Sep 2009 -  Sep 2010  </span>
+                         <span> <i class="fa fa-clock-o icon-left"></i> 11 months </span> 
+                      </small>
+                    </p>
+                    <p>Provided technical solutions to support cutting edge manufacturing techniques for the largest defence aquisition project in history, the F-35 Joint Strike Fighter.</p>
+                      <ul>
+                          <li> Delivered a £1M per annum cost saving by leading a project to automate a time consuming manufacturing process. </li>
+                          <li> Led the development of a project to store correction information for out of tolerance parts, designed around the use cases of factory floor end users. </li>
+                      </ul>
+                  </div>
+
+                </li>
+            </ul>
+
+            <h4 id="skills"> <span class="fa fa-lg fa-code"></span> <span class="title">Skills</span> </h4>
+            <ul class="list-unstyled">
+                <li class="card-nested skill 7+ years">
+                  <strong>Web (7+ years):</strong> 
+                   <span class="enumeration">.NET</span>  <span class="enumeration">Node.JS</span>  <span class="enumeration">React</span>  <span class="enumeration">TypeScript</span>  <span class="enumeration">Python</span>  <span class="enumeration">Go</span>  <span class="enumeration">PostgreSQL</span>  <span class="enumeration">Automated testing</span> 
+              </li>
+                <li class="card-nested skill 2+ years">
+                  <strong>Cloud (2+ years):</strong> 
+                   <span class="enumeration">GCP</span>  <span class="enumeration">Linux</span>  <span class="enumeration">Dev-ops</span>  <span class="enumeration">Docker</span>  <span class="enumeration">Kubernetes</span>  <span class="enumeration">Terraform</span>  <span class="enumeration">AWS</span>  <span class="enumeration">Gitlab</span>  <span class="enumeration">Ansible</span> 
+              </li>
+                <li class="card-nested skill 1+ year">
+                  <strong>Startups (1+ year):</strong> 
+                   <span class="enumeration">Strategy</span>  <span class="enumeration">Funding</span>  <span class="enumeration">Technical leadership</span> 
+              </li>
+            </ul>
+  
+            <h4 id="education"><span class="fa fa-lg fa-mortar-board"></span> <span class="title">Education</span></h4>
+            
+            <ul class="list-unstyled">
+                <li class="card-nested">
+                  <div class="content has-sidebar">
+                    <p class="clear-margin-sm">
+                      <strong>Google Cloud Platform, Online</strong>,&nbsp;
+                      Google
+                    </p>
+                    <p class="text-muted">
+                      <small>
+                        Jan 2020 -  Jan 2020 
+                      </small>
+                    </p>
+                    <i></i>
+                    <div class="space-top labels">
+                       <span class="label label-keyword">Professional Cloud Developer</span>  <span class="label label-keyword">Associate Cloud Engineer</span> 
+                    </div>
+                  </div>
+                </li>
+                <li class="card-nested">
+                  <div class="content has-sidebar">
+                    <p class="clear-margin-sm">
+                      <strong>Functional Programming in Scala, Online</strong>,&nbsp;
+                      Coursera
+                    </p>
+                    <p class="text-muted">
+                      <small>
+                        Jan 2016 -  Jan 2017 
+                      </small>
+                    </p>
+                    <i></i>
+                    <div class="space-top labels">
+                       <span class="label label-keyword">Functional program design</span>  <span class="label label-keyword">Parallel programming</span>  <span class="label label-keyword">Functional programming principles</span>  <span class="label label-keyword">Big data analysis with Spark</span> 
+                    </div>
+                  </div>
+                </li>
+                <li class="card-nested">
+                  <div class="content has-sidebar">
+                    <p class="clear-margin-sm">
+                      <strong>Mechanical Engineering, BEng Hons</strong>,&nbsp;
+                      University of Nottingham
+                    </p>
+                    <p class="text-muted">
+                      <small>
+                        Sep 2010 -  Sep 2013 
+                      </small>
+                    </p>
+                    <i></i>
+                    <div class="space-top labels">
+                      
+                    </div>
+                  </div>
+                </li>
+            </ul>
+
+            <h4 id="awards"><span class="fa fa-lg fa-trophy"></span> <span class="title">Awards</span></h4>
+            <ul class="list-unstyled">
+                <li class="card-nested">
+                  <div class="content has-sidebar">
+                    <p class="clear-margin-sm" itemprop="award">
+                      <strong>Regional winner</strong>,&nbsp;
+                      EDT Contribution to the Business Awards
+                    </p>
+                    <p class="text-muted">
+                      <small> Awarded on: Nov 2010 </small>
+                    </p>
+                    <p> Awarded for leading a project delivering +£1M annual savings for Rolls-Royce plc. </p>
+                  </div>
+                </li>
+            </ul>
+
+            <h4 id="volunteer-work"><span class="fa fa-lg fa-child"></span> <span class="title">Volunteer Work</span> </h4>
+            <ul class="list-unstyled">
+                <li class="card-nested">
+                  <div class="content has-sidebar">
+                    <p class="clear-margin-sm">
+                      <strong>Founder</strong>,&nbsp;
+                      Indie Hacker Manchester
+                    </p>
+                    <p class="text-muted">
+                      <small>
+                        Apr 2019 -  Dec 2019 
+                      </small>
+                    </p>
+                    <p>A community for self-funder internet entpreneurs.</p>
+                    <ul>
+                    </ul>
+                  </div>
+                </li>
+                <li class="card-nested">
+                  <div class="content has-sidebar">
+                    <p class="clear-margin-sm">
+                      <strong>Contributor</strong>,&nbsp;
+                      ASP.NET Core
+                    </p>
+                    <p class="text-muted">
+                      <small>
+                        Dec 2017 -  Present 
+                      </small>
+                    </p>
+                    <p></p>
+                    <ul>
+                        <li> Created &#x27;409 Conflict&#x27; controller response. </li>
+                        <li> Bug fixes for JSON serialization. </li>
+                        <li> Bug fixes for displaying enumerations. </li>
+                    </ul>
+                  </div>
+                </li>
+            </ul>
+
+
+
+            <h4 id="references"><span class="fa fa-lg fa-thumbs-up"></span> <span class="title">References</span> </h4>
+            <ul class="list-unstyled">
+                <li class="card-nested">
+                  <p>
+                    <strong>Prof. Robin Bargar</strong>
+                  </p>
+                  <blockquote class="quote">
+                    <p class="clear-margin">&quot;Charlie is highly collaborative and quickly came up to speed with a project which is very complex. He went the extra mile to perform secondary research and create prototypes to advance the project on schedule.&quot;</p>
+                  </blockquote>
+                </li>
+                <li class="card-nested">
+                  <p>
+                    <strong>Paul Gamblen</strong>
+                  </p>
+                  <blockquote class="quote">
+                    <p class="clear-margin">&quot;Charlie is a flexible full stack developer, comfortable across many languages and technologies. He is professional, hard-working and knowledgeable. A great engineer to have on your team.&quot;</p>
+                  </blockquote>
+                </li>
+            </ul>
+
+
+          </div>
+        </div>
+      </section>
+    </div>
+    
+  </body>
+</html>
